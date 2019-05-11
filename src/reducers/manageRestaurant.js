@@ -25,7 +25,7 @@ export default function manageRestaurants(state={ restaurants: [] }, action) {
           text: action.text
         }
         return { ...state, restaurants: state.restaurants.map(resto => {
-          resto.id !== action.id ? resto : {...resto, reviews: resto.reviews.concat(review)}
+          resto.id !== action.restoId ? resto : {...resto, reviews: resto.reviews.concat(review)}
          }) };
 
       case 'DELETE_REVIEW':
