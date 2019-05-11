@@ -3,7 +3,6 @@ import ReviewsContainer from '../../containers/ReviewsContainer'
 
 class Restaurant extends Component {
 
-
   render() {
     const { restaurant } = this.props;
 
