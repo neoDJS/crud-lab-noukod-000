@@ -5,7 +5,7 @@ class ReviewInput extends Component {
 
   state = {
     text: '',
-    restaurantId: this.props.restoId
+    restaurantId: this.props.restaurantId
   }
 
   handleOnChange(event) {
