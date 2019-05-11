@@ -9,7 +9,7 @@ class RestaurantsContainer extends Component {
     return (
       <div>
         <RestaurantInput addRestaurant={this.props.addResto}/>
-        <Restaurants delete={this.props.deleteResto}  restaurants={this.props.restaurants}/>
+        <Restaurants restaurants={this.props.restaurants} delete={this.props.deleteResto}/>
       </div>
     )
   }

@@ -8,7 +8,7 @@ class RestaurantInput extends Component {
 
   handleOnChange(event) {
     this.setState({
-      text: event.target.value,
+      text: event.target.value
     });
   }
 
@@ -16,7 +16,7 @@ class RestaurantInput extends Component {
     event.preventDefault();
     this.props.addRestaurant(this.state.text);
     this.setState({
-      text: '',
+      text: ''
     });
   }
 
