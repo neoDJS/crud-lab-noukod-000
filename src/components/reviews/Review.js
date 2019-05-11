@@ -21,7 +21,7 @@ class Review extends Component {
         <li>
           {review.text}
         </li>
-        <button onClick={this.handleDelClick}> X </button>
+        <button id='delete' onClick={this.handleDelClick}> X </button>
         {/*<ReviewInput saveReview={this.handleUpClick} restoId={review.restaurantId}/>*/}
       </div>
     );

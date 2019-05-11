@@ -15,7 +15,7 @@ export default function manageRestaurants(state={ restaurants: [], reviews: [] }
 
       case 'UPDATE_RESTAURANT':
 
-        return { ...state, restaurants: state.restaurants.map(resto => resto.id !== action.id ? resto : {...resto, text: action.text}) };
+        return { ...state, restaurants: state.restaurants.map(resto => resto.id !== action.resto.id ? resto : {...resto, text: action.resto.text}) };
 
       case 'DELETE_RESTAURANT':
 
@@ -32,7 +32,7 @@ export default function manageRestaurants(state={ restaurants: [], reviews: [] }
 
       case 'UPDATE_REVIEW':
 
-        return { ...state, reviews: state.reviews.map(review => review.id !== action.id ? review : {...review, text: action.text}) };
+        return { ...state, reviews: state.reviews.map(review => review.id !== action.review.id ? review : {...review, text: action.review.text}) };
 
       case 'DELETE_REVIEW':
 
