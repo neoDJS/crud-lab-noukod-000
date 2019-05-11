@@ -13,6 +13,10 @@ export default function manageRestaurants(state={ restaurants: [], reviews: [] }
         }
         return { ...state, restaurants: state.restaurants.concat(resto) };
 
+      case 'UPDATE_RESTAURANT':
+
+        return { ...state, restaurants: state.restaurants.map(resto => resto.id !== action.id ? resto : {...resto, text: action.text}) };
+
       case 'DELETE_RESTAURANT':
 
         return { ...state, restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.restoId)}
@@ -25,6 +29,10 @@ export default function manageRestaurants(state={ restaurants: [], reviews: [] }
           text: action.review.text
         }
         return { ...state, reviews: state.reviews.concat(review) };
+
+      case 'UPDATE_REVIEW':
+
+        return { ...state, reviews: state.reviews.map(review => review.id !== action.id ? review : {...review, text: action.text}) };
 
       case 'DELETE_REVIEW':
 

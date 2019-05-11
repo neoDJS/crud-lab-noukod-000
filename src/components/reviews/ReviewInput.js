@@ -16,7 +16,7 @@ class ReviewInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.addReview(this.state);
+    this.props.saveReview(this.state);
     this.setState({
       text: ''
     });
