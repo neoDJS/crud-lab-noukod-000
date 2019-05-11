@@ -4,7 +4,7 @@ class Review extends Component {
 
   handleOnClick = (event) => {
     event.preventDefault();
-    this.props.delete(this.props.review.restaurantId, this.props.review.id);
+    this.props.delete(this.props.review.id);
   }
 
   render() {
