@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 class Review extends Component {
 
+  handleOnClick = (event) => {
+    event.preventDefault();
+    this.props.delete(this.props.review.restaurantId, this.props.review.id);
+  }
+
   render() {
     const { review } = this.props
 
@@ -10,7 +15,7 @@ class Review extends Component {
         <li>
           {review.text}
         </li>
-        <button onClick={()=> this.props.delete(this.props.restaurantId, review.id)}> X </button>
+        <button onClick={this.handleOnClick}> X </button>
       </div>
     );
   }

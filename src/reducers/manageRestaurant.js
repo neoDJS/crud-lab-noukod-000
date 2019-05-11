@@ -22,10 +22,11 @@ export default function manageRestaurants(state={ restaurants: [] }, action) {
 
         const review = {
           id: cuid(),
-          text: action.text
+          restaurantId: action.review.restaurantId,
+          text: action.review.text
         }
         return { ...state, restaurants: state.restaurants.map(resto => {
-          resto.id !== action.restoId ? resto : {...resto, reviews: resto.reviews.concat(review)}
+          resto.id !== review.restaurantId ? resto : {...resto, reviews: resto.reviews.concat(review)}
          }) };
 
       case 'DELETE_REVIEW':

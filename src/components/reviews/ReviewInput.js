@@ -4,20 +4,21 @@ import Reviews from './Reviews';
 class ReviewInput extends Component {
 
   state = {
-    text: ''
+    text: '',
+    restaurantId: this.props.restoId
   }
 
   handleOnChange(event) {
     this.setState({
-      text: event.target.value,
+      text: event.target.value
     });
   }
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.addReview(this.props.restoId, this.state.text);
+    this.props.addReview(this.state);
     this.setState({
-      text: '',
+      text: ''
     });
   }
 
