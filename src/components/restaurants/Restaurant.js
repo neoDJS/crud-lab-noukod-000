@@ -22,7 +22,7 @@ class Restaurant extends Component {
         <li>
           {restaurant.text}
           <button id='delete' onClick={this.handleDelClick}> X </button>
-          <RestaurantInput saveRestaurant={this.handleUpClick}/>
+          {/*<RestaurantInput saveRestaurant={this.handleUpClick}/>*/}
           <ReviewsContainer restaurant={restaurant} />
         </li>
       </div>
