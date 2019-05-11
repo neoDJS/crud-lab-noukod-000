@@ -5,13 +5,12 @@ import Reviews from '../components/reviews/Reviews'
 
 class ReviewsContainer extends Component {
 
-  reviews = () => this.props.reviews.filter(review => review.restaurantId !== this.props.restaurant.id)
-
   render() {
+    const reviews = this.props.reviews.filter(review => review.restaurantId === this.props.restaurant.id);
     return (
       <div>
         <ReviewInput saveReview={this.props.addReview} restaurantId={this.props.restaurant.id}/>
-        <Reviews delete={this.props.deleteReview} reviews={this.reviews()} />
+        <Reviews delete={this.props.deleteReview} reviews={reviews} />
       </div>
     )
   }
