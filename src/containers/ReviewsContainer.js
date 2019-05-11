@@ -6,7 +6,7 @@ import Reviews from '../components/reviews/Reviews'
 class ReviewsContainer extends Component {
 
   render() {
-    const reviews = this.props.reviews.filter(review => review.restaurantId != this.props.restaurant.id);
+    const reviews = this.props.reviews.filter(review => review.restaurantId === this.props.restaurant.id);
     return (
       <div>
         <ReviewInput saveReview={this.props.addReview} restaurantId={this.props.restaurant.id}/>
